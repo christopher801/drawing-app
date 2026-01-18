@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasyon Desine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🎨</span>
+                <h1>Aplikasyon Desine</h1>
+            </div>
+            <p class="subtitle">Kreye atwork ou!</p>
+        </header>
+
+        <!-- Main App -->
+        <div class="app-container">
+            <!-- Toolbar -->
+            <div class="toolbar">
+                <div class="tool-section">
+                    <h3>🖌️ Zouti</h3>
+                    <div class="tools">
+                        <button class="tool-btn active" data-tool="pen" title="Pen">
+                            ✏️
+                        </button>
+                        <button class="tool-btn" data-tool="eraser" title="Efase">
+                            🧹
+                        </button>
+                        <button class="tool-btn" data-tool="line" title="Line">
+                            ➖
+                        </button>
+                        <button class="tool-btn" data-tool="rectangle" title="Rectangle">
+                            ▭
+                        </button>
+                        <button class="tool-btn" data-tool="circle" title="Circle">
+                            ⭕
+                        </button>
+                        <button class="tool-btn" data-tool="fill" title="Fill">
+                            🪣
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tool-section">
+                    <h3>🎨 Koulè</h3>
+                    <div class="color-picker">
+                        <input type="color" id="colorPicker" value="#ff6b9d">
+                        <div class="preset-colors">
+                            <div class="color-box" style="background: #000000" data-color="#000000"></div>
+                            <div class="color-box" style="background: #ffffff" data-color="#ffffff"></div>
+                            <div class="color-box" style="background: #ff6b9d" data-color="#ff6b9d"></div>
+                            <div class="color-box" style="background: #c44569" data-color="#c44569"></div>
+                            <div class="color-box" style="background: #f3a683" data-color="#f3a683"></div>
+                            <div class="color-box" style="background: #f7d794" data-color="#f7d794"></div>
+                            <div class="color-box" style="background: #778beb" data-color="#778beb"></div>
+                            <div class="color-box" style="background: #e77f67" data-color="#e77f67"></div>
+                            <div class="color-box" style="background: #cf6a87" data-color="#cf6a87"></div>
+                            <div class="color-box" style="background: #f8a5c2" data-color="#f8a5c2"></div>
+                            <div class="color-box" style="background: #63cdda" data-color="#63cdda"></div>
+                            <div class="color-box" style="background: #ea8685" data-color="#ea8685"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-section">
+                    <h3>📏 Gwosè</h3>
+                    <input type="range" id="brushSize" min="1" max="50" value="5" class="slider">
+                    <span class="size-value" id="sizeValue">5px</span>
+                    <div class="brush-preview" id="brushPreview"></div>
+                </div>
+
+                <div class="tool-section">
+                    <h3>⚙️ Actions</h3>
+                    <div class="actions">
+                        <button class="action-btn" id="undoBtn" title="Undo">
+                            ↶ Undo
+                        </button>
+                        <button class="action-btn" id="redoBtn" title="Redo">
+                            ↷ Redo
+                        </button>
+                        <button class="action-btn" id="clearBtn" title="Clear">
+                            🗑️ Clear
+                        </button>
+                        <button class="action-btn" id="saveBtn" title="Save">
+                            💾 Save
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tool-section">
+                    <h3>🖼️ Background</h3>
+                    <div class="bg-options">
+                        <button class="bg-btn active" data-bg="white">
+                            ⚪ Blan
+                        </button>
+                        <button class="bg-btn" data-bg="black">
+                            ⚫ Nwa
+                        </button>
+                        <button class="bg-btn" data-bg="transparent">
+                            ◻️ Transparent
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canvas Area -->
+            <div class="canvas-area">
+                <div class="canvas-wrapper">
+                    <canvas id="canvas"></canvas>
+                </div>
+                <div class="canvas-info">
+                    <span>Tool: <strong id="currentTool">Pen</strong></span>
+                    <span>Size: <strong id="currentSize">5px</strong></span>
+                    <span>Color: <strong id="currentColor">#ff6b9d</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Pwojè #17 - 30 Days 30 Projects</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
